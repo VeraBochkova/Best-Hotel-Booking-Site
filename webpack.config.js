@@ -1,18 +1,21 @@
-let path = require('path');
-let MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-let conf = {
+module.exports = {
     entry: {
         app: './src/index.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js',
-        publicPath: './dist'
+        publicPath: '/dist'
     },
     devServer: {
         overlay: true
     },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '.cjs', '.less']
+      },
     module: {
         rules: [
             {
@@ -24,17 +27,22 @@ let conf = {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader"
-                ]
+                    {
+                    loader: "css-loader"
+                }]
             },
             {
                 test: /\.less$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "less-loader",
-                    "style-loader"
-                ]
+                    'style-loader',
+                    MiniCssExtractPlugin.loader
+                , {
+                    loader: 'css-loader',
+                    options: {sourceMap: true}
+                }, {
+                    loader: 'less-loader',
+                    options: {sourceMap: true}
+                }]
             }
         ]
     },
@@ -43,12 +51,4 @@ let conf = {
           filename: '[name].css'
         })
     ]
-};
-
-module.exports = (env, options) => {
-    let production = options.mode === 'production';
-    conf.devtool = production
-                    ? false
-                    : 'evalsourcemap';
-    return conf;
 }
