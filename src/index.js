@@ -1,1 +1,1 @@
-import './assets/less/color';
+import './assets/less/vars';
