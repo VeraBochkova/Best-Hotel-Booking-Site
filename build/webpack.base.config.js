@@ -11,7 +11,7 @@ const PATHS = {
     assets: 'assets/'
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/pages/`
+const PAGES_DIR = `${PATHS.src}/pug`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
@@ -93,12 +93,17 @@ module.exports = {
           filename: `${PATHS.assets}css/[name].css`
         }),
         new CopyWebpackPlugin([
-            {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
-            {from: `${PATHS.src}/static`, to: ''}
+            {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`}
+            //{from: `${PATHS.src}/static`, to: ''}
         ]),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
             filename: `./${page.replace(/\.pug/,'.html')}`
-          }))
+          }))//,
+          //new HtmlWebpackPlugin({
+            //template: `${PAGES_DIR}/UIKit.pug`,
+            //filename: './UIKit/UIKit.html',
+            //inject: true
+          //})
     ]
 }

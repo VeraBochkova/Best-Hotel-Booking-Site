@@ -1,1 +1,1 @@
-import './assets/less/utils/vars';
+import './assets/less/main';

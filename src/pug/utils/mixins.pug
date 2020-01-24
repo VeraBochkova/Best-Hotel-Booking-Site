@@ -1,0 +1,18 @@
+// colors & type square 
+
+mixin colorblocks(options)
+  -
+    var colorlist = [
+    {color: '@dark-shade-100'},
+    {color: '@dark-shade-75'},
+    {color: '@dark-shade-50'},
+    {color: '@dark-shade-25'},
+    {color: '@dark-shade-5'},
+    {color: '@purple'},
+    {color: '@green'}
+    ];
+
+    each colorItem in [1, 2]
+      +colorblocks()
+     
+    

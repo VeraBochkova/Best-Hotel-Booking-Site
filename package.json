@@ -35,6 +35,8 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "node-less": "^1.0.0",
+    "normalize.css": "^8.0.1",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",
@@ -44,7 +46,6 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2",
-    "node-less": "^1.0.0"
+    "webpack-merge": "^4.2.2"
   }
 }
