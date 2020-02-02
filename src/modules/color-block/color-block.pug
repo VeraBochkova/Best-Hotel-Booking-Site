@@ -1,2 +1,7 @@
+- var colorBlockList = [{name: 'color-block', colorName: 'Dark Shade', percent: '100%', colorNum: '#1F2041'}, {name: 'color-block color-block_dark-shade-75', colorName: 'Dark Shade', percent: '75%', colorNum: '#1F2041'}, {name: 'color-block color-block_dark-shade-50', colorName: 'Dark Shade', percent: '50%', colorNum: '#1F2041'}, {name: 'color-block color-block_dark-shade-25', colorName: 'Dark Shade', percent: '25%', colorNum: '#1F2041'}, {name: 'color-block color-block_dark-shade-5', colorName: 'Dark Shade', percent: '5%', colorNum: '#1F2041'}, {name: 'color-block color-block_purple', colorName: 'Purple', percent: '', colorNum: '#BC9CFF'}, {name: 'color-block color-block_green', colorName: 'Green', percent: '', colorNum: '#6FCF97'}];
 
-       
+each item in colorBlockList
+  div(class="" + item.name)
+  .color-block-text
+    p.color-block-text__text #{item.colorName} #{item.percent}
+    p.color-block-text__text.color-block-text__text_regular-text= item.colorNum

@@ -1,0 +1,8 @@
+- var textTypesList = [{titleClassName: 'text-title', titleName: 'H1', textClassName: 'text-type', text: 'This one is the sub-section or widget title'}, {titleClassName: 'text-title text-title_size-1', titleName: 'H2', textClassName: 'text-type text-type_type-1', text: 'Next one is the item title inside widgets'}, {titleClassName: 'text-title text-title_size-2', titleName: 'H3', textClassName: 'text-type text-type_type-2', text: 'This is a label or CTA text'}, {titleClassName: 'text-title text-title_size-3', titleName: 'Body', textClassName: 'text-type text-type_type-3', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}];
+
+each item in textTypesList
+  div(class="" + item.titleClassName)
+    p= item.titleName
+  div(class="" + item.textClassName)
+    p= item.text
+    

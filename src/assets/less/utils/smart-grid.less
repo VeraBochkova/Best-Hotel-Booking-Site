@@ -1,13 +1,13 @@
-@columns: 12;
+@columns: 17;
 @atom: (100% / @columns);
 
 @break_lg: 1920px;
-@break_md: 992px;
-@break_sm: 720px;
-@break_xs: 576px;
+@break_md: 980px;
+@break_sm: 780px;
+@break_xs: 480px;
 @break_xxs: 320px;
 
-@offset: 30px;
+@offset: 10px;
 @offset_lg: @offset;
 @offset_md: @offset;
 @offset_sm: @offset;
@@ -19,8 +19,8 @@
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
 
-@fields: 30px;
-@fields_md: 15px;
+@fields: 10px;
+@fields_md: 5px;
 
 .wrapper-full(){
   padding-left: @fields;
@@ -43,7 +43,7 @@
 }
 
 .wrapper(){
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
   .wrapper-full();
 }
@@ -412,7 +412,8 @@
     
     > div{
       height: inherit;
-      .row-flex();
+      display: flex;
+      flex-wrap: wrap;
       
       > div{
         .col();

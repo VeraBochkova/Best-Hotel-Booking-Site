@@ -1,4 +1,29 @@
+@import "utils/smart-grid";
 @import "utils/vars";
-@import "../../modules/color-block/color-block";
-//@import "utils/libs";
+@import "utils/fonts";
+@import "utils/mixins";
 
+html {
+  .reset();
+  box-sizing: border-box;
+  @media screen and (max-width: @break_md){
+    font-size: 15px;
+  }
+  @media screen and (max-width: @break_sm){
+    font-size: 14px;
+  }
+  @media screen and (max-width: @break_xs){
+    font-size: 13px;
+  }
+  @media screen and (max-width: @break_xxs){
+    font-size: 12px;
+  }
+}
+
+/* Greed for design project. */
+.debug-grid {
+  .debug(@dark-shade-5, 1px solid @dark-shade-100);
+}
+
+@import "../../modules/color-block/color-block";
+@import "../../modules/text-types/text-types";
