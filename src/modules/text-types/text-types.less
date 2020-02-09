@@ -3,51 +3,67 @@
   flex-wrap: wrap;
   flex-direction: row;
   align-self: flex-start;
-  width: @rem*403;
-  margin-left: 10.25vw;
-  padding-top: @rem*145;
+  width: @rem*404;
+  margin-left: @rem*140;
+  padding-top: @rem*10;
   @media screen and (max-width: 1350px){
     margin: 0 auto;
-    justify-content: center;
   }
-  outline: solid blueviolet 4px;
+  @media screen and (max-width: 750px){
+    margin: @rem*10 @rem*80 @rem*0 @rem*80;
+  }
+  @media screen and (max-width: 530px){
+    margin: @rem*10 auto 0 auto;
+  }
+  @media screen and (max-width: 360px){
+    justify-content: start;
+  }
 }
 
 .text-title {
   .font-properties(@rem*24; @rem*29; rgba(31, 32, 65, 0.25); @montserrat-regular);
-  margin-left: @rem*7;
-  outline: solid rgb(231, 12, 147) 2px;
+  margin-left: @rem*9;
   &_size-1 {
     .font-properties(@rem*19; @rem*23; rgba(31, 32, 65, 0.25); @montserrat-regular);
-    margin-left: @rem*9;
+    margin-left: @rem*11;
   }
   &_size-2 {
     .font-properties(@rem*12; @rem*15; rgba(31, 32, 65, 0.25); @montserrat-regular);
-    margin-left: @rem*19;
+    margin-left: @rem*20;
   }
   &_size-3 {
     .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.25); @montserrat-regular);
      margin-left: @rem*0;
   }
+  @media screen and (max-width: 360px){
+    margin: @rem*0 auto @rem*20 @rem*20;
+  }
 }
 
 .text-type{
   .font-properties(@rem*24p; @rem*30; #1F2041; @quicksand-bold);
-  width: @rem*336;
+  max-width: @rem*336;
   margin: @rem*0 auto @rem*50 @rem*30;
-  outline: solid rgb(231, 12, 147) 2px;
+  @media screen and (max-width: 360px){
+    margin: @rem*0 @rem*20 @rem*50 @rem*20;
+  }
   &_type-1 {
     .font-properties(@rem*19; @rem*24; #1F2041; @quicksand-bold);
-    margin-right: @rem*1;
   }
   &_type-2 {
     .font-properties(@rem*12; @rem*15; #1F2041; @montserrat-bold);
     text-transform: uppercase;
-    margin-right: @rem*1;
+    margin-right: @rem*150;
     margin-bottom: @rem*47;
+    @media screen and (max-width: 360px){
+      margin: @rem*0 @rem*180 @rem*50 @rem*20;
+    }
   }
   &_type-3 {
     .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.75); @montserrat-regular);
     width: @rem*301;
+    @media screen and (max-width: 360px){
+      margin: @rem*0 @rem*40 @rem*50 @rem*20;
+    }
   }
 }

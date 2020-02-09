@@ -1,0 +1,31 @@
+.section-form-elements {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /*justify-content: center;*/
+}
+
+.wrapper-input-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: @rem*320;
+  margin-left: @rem*141;
+  margin-top: @rem*8;
+}
+
+.input-email-label {
+  .font-properties(@rem*12; @rem*15; #1F2041; @montserrat-bold);
+  text-transform: uppercase;
+}
+
+.input-email {
+  .font-properties(@rem*14; @rem*18; rgba(31, 32, 65, 0.25); @montserrat-regular);
+  width: @rem*320;
+  height: @rem*44;
+  border-radius: @rem*4;
+  border: @rem*1 solid rgba(31, 32, 65, 0.25);
+  background: #FFFFFF;
+}
