@@ -51,10 +51,13 @@
   },
   "config": {
     "commitizen": {
-    "path": "node_modules/cz-customizable"
+      "path": "node_modules/cz-customizable"
     },
     "cz-customizable": {
-    "config": "commitizen.js"
+      "config": "commitizen.js"
     }
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }

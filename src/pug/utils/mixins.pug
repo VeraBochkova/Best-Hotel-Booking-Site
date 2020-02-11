@@ -1,12 +1,13 @@
 // mixin input email
-// +input-email({label: "", name: "", placeholder: "", name-modifier(specify modifier name): "true", name-modifier(specify modifier name): "true"})
+// +input-email({label: "", name: "", type: "", placeholder: "", name-modifier(specify modifier name): "true", name-modifier(specify modifier name): "true"})
 
-mixin input-email(options)
-  -var labelClassName = "input-email-label"
-  -var inputClassName = "input-email"
-  //labelClassName += options.name-modifier ? "input-email-label_modifier-class-name" : ""
-  //inputClassName += options.name-modifier ? "input-email_modifier-class-name" : ""
+mixin input-field(options)
+  -var labelClassName = "input-field-label"
+  -var inputClassName = "input-field"
+  -inputClassName += options.hoverFocus ? " input-field_hover-focus" : ""
+  //labelClassName += options.name-modifier ? " input-email-label_modifier-class-name" : ""
+  //inputClassName += options.name-modifier ? " input-email_modifier-class-name" : ""
   label(class=labelClassName)= options.label
-  input(class=inputClassName)(name=options.name, type="email", placeholder=options.placeholder)
+  input(class=inputClassName)(name=options.name, type=options.type, placeholder=options.placeholder)
     
 
