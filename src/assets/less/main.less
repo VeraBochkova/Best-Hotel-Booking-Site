@@ -5,6 +5,14 @@
 
 html {
   .reset();
+  /* support for all webkit browsers*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  /* support for safari chrome*/
+  text-rendering: optimizelegibility;
+  /* support for firefox*/
+  -moz-osx-font-smoothing: grayscale;
+  /* support for ie*/
+  font-feature-settings: "liga";
   box-sizing: border-box;
   @media screen and (max-width: @break_md){
     font-size: 15px;
@@ -20,10 +28,10 @@ html {
   }
 }
 
-/* Greed for design project. */
+/* Greed for design project. 
 .debug-grid {
   .debug(@dark-shade-5, 1px solid @dark-shade-100);
-}
+}*/
 
 @import "../../modules/header-ui-kit/header-ui-kit";
 @import "../../modules/color-block/color-block";

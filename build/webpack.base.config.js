@@ -42,7 +42,7 @@ module.exports = {
         exclude: '/node_modules/'
       },
       {
-        test: /\.(png\jpg\gif\svg)$/,
+        test: /\.(png\jpg\gif\svg\ico)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
@@ -105,8 +105,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
-      {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`}
-      //{from: `${PATHS.src}/static`, to: ''}
+      {from: `${PATHS.src}/modules/dropdown/img`, to: `${PATHS.assets}img`},
+      {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
+      {from: `${PATHS.src}/${PATHS.assets}static`, to: `${PATHS.assets}static`}
     ]),
     new webpack.ProvidePlugin({
       $: `jquery`,

@@ -13,23 +13,9 @@
   flex-direction: row;
   width: @rem*320;
   margin-left: @rem*141;
-  margin-top: @rem*8;
+  margin-top: @rem*4;
+  justify-content: space-between;
 }
 
-.input-field-label {
-  .font-properties(@rem*12; @rem*15; #1F2041; @montserrat-bold);
-  text-transform: uppercase;
-}
-
-.input-field {
-  .font-properties(@rem*14; @rem*18; rgba(31, 32, 65, 0.25); @montserrat-regular);
-  width: 100%;
-  height: @rem*44;
-  border-radius: @rem*4;
-  border: @rem*1 solid rgba(31, 32, 65, 0.25);
-  background: #FFFFFF;
-  &_hover-focus {
-    .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.75); @montserrat-regular);
-    border-color: rgba(31, 32, 65, 0.5);
-  }
-}
+@import "../input-block/input-block";
+@import "../dropdown/dropdown";

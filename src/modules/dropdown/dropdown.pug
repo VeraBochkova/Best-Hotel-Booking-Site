@@ -1,0 +1,18 @@
+// mixin dropdown-form
+// +dropdown-form({title: "", description: "", content: "", name-modifier(specify modifier name): "true"})
+
+mixin dropdown-form(options)
+  -var dropdownFormClassName = "dropdown-form"
+  -var formTitleClassName = "dropdown-form__title"
+  -var formDescriptionClassName = "dropdown-form__description"
+  -var formFieldContainerClassName = "dropdown-form__field-container"
+  -var formСontentClassName = "dropdown-form__content"
+  -var formIconClassName = "dropdown-form__icon"
+  //-formFieldContainerClassName += options.date ? " dropdown-form__field-container_date" : ""
+  -dropdownFormClassName += options.date ? " dropdown-form_date" : ""
+  div(class=dropdownFormClassName)
+    div(class=formTitleClassName)= options.title
+    div(class=formDescriptionClassName)= options.description
+    div(class=formFieldContainerClassName)
+      div(class=formСontentClassName)=options.content
+      div(class=formIconClassName) expand_more

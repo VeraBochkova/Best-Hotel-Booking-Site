@@ -1,0 +1,51 @@
+.input-block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: @rem*18;
+  &__title {
+    .font-properties(@rem*12; @rem*15; #1F2041; @montserrat-bold);
+    text-transform: uppercase;
+    margin-top: @rem*3;
+  }
+  &__description {
+    .font-properties(@rem*12; @rem*15; rgba(31, 32, 65, 0.5); @montserrat-regular);
+    text-transform: uppercase;
+    &_hover-focus {
+      margin-top: @rem*2;
+      letter-spacing: -@rem*0.2;
+    }
+  }
+  &__field-container {
+    margin-top: @rem*5;
+    width: 100%;
+    border-radius: @rem*4;
+    border: @rem*1 solid rgba(31, 32, 65, 0.25);
+    background: #FFFFFF;
+    overflow: hidden;
+    &_hover-focus {
+      border-color: rgba(31, 32, 65, 0.5);
+    }
+  }
+  &__field {
+    .font-properties(@rem*14; @rem*18; rgba(31, 32, 65, 0.25); @montserrat-regular);
+    border: none;
+    padding: @rem*12 0 @rem*12 @rem*14;
+    &_hover-focus {
+      .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.75); @montserrat-regular);
+      padding: @rem*8 0 @rem*10 @rem*14;
+      letter-spacing: -@rem*0.2;
+    }
+    &_date {
+      .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.25); @montserrat-regular);
+      padding: @rem*7 0 @rem*9 @rem*13;
+      text-transform: uppercase;
+      letter-spacing: -@rem*0.5;
+    }
+  }
+  &__date {
+    margin-top: @rem*2;
+  }
+}
