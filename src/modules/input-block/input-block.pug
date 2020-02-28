@@ -1,9 +1,9 @@
 // mixin input 
-// +input-block({title: "", name: "", inputDescription: "", type: "", placeholder: "", name-modifier(specify modifier name): "true"})
+// +input-block({label: "", name: "", inputDescription: "", type: "", placeholder: "", id: "", name-modifier(specify modifier name): "true"})
 
 mixin input-block(options)
   -var blockClassName = "input-block"
-  -var titleClassName = "input-block__title"
+  -var labelClassName = "input-block__label"
   -var descriptionClassName = "input-block__description"
   -var fieldContainerClassName = "input-block__field-container"
   -var fieldClassName = "input-block__field"
@@ -11,10 +11,11 @@ mixin input-block(options)
   -fieldContainerClassName += options.hoverFocus ? " input-block__field-container_hover-focus" : ""
   -descriptionClassName += options.hoverFocus ? " input-block__description_hover-focus" : ""
   -fieldClassName += options.date ? " input-block__field_date" : ""
+  -blockClassName += options.hoverFocus ? " input-block_hover-focus" : ""
   -blockClassName += options.date ? " input-block__date" : ""
   //-titleClassName += options.name-modifier ? " input-block__title_modifier-class-name" : ""
   div(class=blockClassName)
-    div(class=titleClassName)= options.title
+    label(class=labelClassName for=options.id)= options.label
     div(class=descriptionClassName)= options.inputDescription
     div(class=fieldContainerClassName)
-      input(class=fieldClassName)(name=options.name, type=options.type, placeholder=options.placeholder)
+      input(class=fieldClassName id=options.id)(name=options.name, type=options.type, placeholder=options.placeholder)

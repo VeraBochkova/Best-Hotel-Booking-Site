@@ -4,8 +4,11 @@
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: @rem*18;
-  &__title {
+  margin-bottom: @rem*15;
+  &_hover-focus {
+    margin-top: @rem*2;
+  }
+  &__label {
     .font-properties(@rem*12; @rem*15; #1F2041; @montserrat-bold);
     text-transform: uppercase;
     margin-top: @rem*3;
@@ -36,13 +39,11 @@
     &_hover-focus {
       .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.75); @montserrat-regular);
       padding: @rem*8 0 @rem*10 @rem*14;
-      letter-spacing: -@rem*0.2;
+      letter-spacing: -@rem*0.17;
     }
     &_date {
       .font-properties(@rem*14; @rem*24; rgba(31, 32, 65, 0.25); @montserrat-regular);
-      padding: @rem*7 0 @rem*9 @rem*13;
-      text-transform: uppercase;
-      letter-spacing: -@rem*0.5;
+      padding: @rem*8 0 @rem*10 @rem*14;
     }
   }
   &__date {

@@ -1,0 +1,17 @@
+// mixin checkbox-button
+// +checkbox-button-block({legend: ""}, [{label: "", type: "", name-modifier(specify modifier name): "true"}, {label: "", type: "", name-modifier(specify modifier name): "true"}])
+
+mixin checkbox-button-block(legend, options)
+  -var checkboxBlockClassName = "checkbox-button-block"
+  -var legendClassName = "checkbox-button-block__legend"
+  -var labelClassName = "checkbox-button-block__label"
+  -var InputClassName = "checkbox-button-block__input"
+  -var customClassName = "checkbox-button-block__custom"
+  -var contentClassName = "checkbox-button-block__content"
+  legend(class=legendClassName)=legend.legend
+    div(class=checkboxBlockClassName)
+      each item in options
+        label(class=labelClassName)
+          input(class=InputClassName)(type=item.type)
+          div(class=customClassName)
+          div(class=contentClassName)= item.label

@@ -1,11 +1,15 @@
 include ../input-block/input-block
 include ../dropdown/dropdown
+include ../checkbox/checkbox
 
 form.wrapper-input-block
-  +input-block({title: "Text field", inputDescription: "default", name: "email", type: "email", placeholder: "Email"})
-  +input-block({title: "Text field", inputDescription: "Hover / Focus", name: "text", type: "text", placeholder: "This is pretty awesome", hoverFocus: "true"})
+  +input-block({label: "Text field", inputDescription: "default", name: "email", type: "email", placeholder: "Email", id: "email"})
+  +input-block({label: "Text field", inputDescription: "Hover / Focus", name: "text", type: "text", placeholder: "This is pretty awesome", id: "text", hoverFocus: "true"})
   +dropdown-form({title: "Dropdown", description: "Default", content: "Сколько гостей"})
-  +input-block({title: "masked text field", inputDescription: "Default", name: "date", type: "date", placeholder: "ДД.ММ.ГГГГ", date: "true"})
+  +input-block({label: "masked text field", inputDescription: "Default", name: "date", type: "text", placeholder: "ДД.ММ.ГГГГ", id: "date", date: "true"})
   +dropdown-form({title: "date Dropdown", content: "ДД.ММ.ГГГГ", date: "true"})
   +dropdown-form({title: "date Dropdown", content: "19.08.2019", date: "true"})
-  
+  +dropdown-form({title: "filter date dropdown", content: "19 авг - 23 авг", filterDate: "true"})
+  +dropdown-form({title: "subscription text field", content: "Email", subscription: "true"})
+form.wrapper-button-block
+  +checkbox-button-block({legend: "Checkbox Buttons"}, [{label: "Можно курить", type: "checkbox"}, {label: "Можно с питомцами", type: "checkbox"}, {label: "Можно пригласить гостей (до 10 человек)", type: "checkbox"}])

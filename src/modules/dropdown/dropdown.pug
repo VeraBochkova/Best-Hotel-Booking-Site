@@ -8,11 +8,19 @@ mixin dropdown-form(options)
   -var formFieldContainerClassName = "dropdown-form__field-container"
   -var formСontentClassName = "dropdown-form__content"
   -var formIconClassName = "dropdown-form__icon"
-  //-formFieldContainerClassName += options.date ? " dropdown-form__field-container_date" : ""
   -dropdownFormClassName += options.date ? " dropdown-form_date" : ""
+  -formIconClassName += options.date ? " dropdown-form__icon_date" : ""
+  -formIconClassName += options.filterDate ? " dropdown-form__icon_filter-date" : ""
+  -dropdownFormClassName += options.filterDate ? " dropdown-form_filter-date" : ""
+  -dropdownFormClassName += options.subscription ? " dropdown-form_subscription" : ""
+  -formIconClassName += options.subscription ? " dropdown-form__icon_subscription" : ""
+  -formСontentClassName += options.subscription ? " dropdown-form__content_subscription" : ""
   div(class=dropdownFormClassName)
     div(class=formTitleClassName)= options.title
     div(class=formDescriptionClassName)= options.description
     div(class=formFieldContainerClassName)
       div(class=formСontentClassName)=options.content
-      div(class=formIconClassName) expand_more
+      if options.subscription=="true"
+        div(class=formIconClassName) arrow_forward
+      else if options.subscription!="true"
+        div(class=formIconClassName) expand_more
