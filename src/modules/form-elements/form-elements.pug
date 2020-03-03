@@ -1,6 +1,7 @@
 include ../input-block/input-block
 include ../dropdown/dropdown
 include ../checkbox/checkbox
+include ../radio-button/radio-button
 
 form.wrapper-input-block
   +input-block({label: "Text field", inputDescription: "default", name: "email", type: "email", placeholder: "Email", id: "email"})
@@ -13,3 +14,4 @@ form.wrapper-input-block
   +dropdown-form({title: "subscription text field", content: "Email", subscription: "true"})
 form.wrapper-button-block
   +checkbox-button-block({legend: "Checkbox Buttons"}, [{label: "Можно курить", type: "checkbox"}, {label: "Можно с питомцами", type: "checkbox"}, {label: "Можно пригласить гостей (до 10 человек)", type: "checkbox"}])
+  +radio-button-block({legend: "Radio Buttons"}, [{label: "Мужчина", type: "radio", name: "male"}, {label: "Женщина", type: "radio", name: "male"}])

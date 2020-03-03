@@ -106,6 +106,7 @@ module.exports = {
     new CopyWebpackPlugin([
       {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
       {from: `${PATHS.src}/modules/checkbox/Vector`, to: `${PATHS.assets}img`},
+      {from: `${PATHS.src}/modules/radio-button/Rectangle 2.1`, to: `${PATHS.assets}img`},
       {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
       {from: `${PATHS.src}/${PATHS.assets}static`, to: `${PATHS.assets}static`}
     ]),

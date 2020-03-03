@@ -1,0 +1,17 @@
+// mixin radio-button
+// +radio-button-block({legend: ""}, [{label: "", type: "", name: "", name-modifier(specify modifier name): "true"}, {label: "", type: "", name-modifier(specify modifier name): "true"}])
+
+mixin radio-button-block(legend, options)
+  -var radioButtonBlockClassName = "radio-button-block"
+  -var legendClassName = "radio-button-block__legend"
+  -var labelClassName = "radio-button-block__label"
+  -var InputClassName = "radio-button-block__input"
+  -var customClassName = "radio-button-block__custom"
+  -var contentClassName = "radio-button-block__content"
+  legend(class=legendClassName)=legend.legend
+    div(class=radioButtonBlockClassName)
+      each item in options
+        label(class=labelClassName)
+          input(class=InputClassName)(type=item.type, name=item.name)
+          div(class=customClassName)
+          div(class=contentClassName)= item.label
