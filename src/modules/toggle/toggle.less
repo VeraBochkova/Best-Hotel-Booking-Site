@@ -1,22 +1,18 @@
-.radio-button-block {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: @rem*14;
+.toggle-block {
+  margin-top: @rem*13;
   &__legend {
-    width: 81.5%;
-    margin-top: @rem*30;
-    .font-properties(@rem*12; @rem*15; #1F2041; @montserrat-bold);
+    margin-top: @rem*40;
+    width: 100%;
+    .font-properties(@rem*11.5; @rem*14; #1F2041; @montserrat-bold);
     text-transform: uppercase;
   }
   &__input {
     display: none;
-    &:checked + .radio-button-block__custom::after {
+    &:checked + .toggle-block__custom::after {
       height: @rem*18;
-      width: @rem*18;
+      width: @rem*38;
       border-radius: @rem*10;
-      background: url("/assets/img/Rectangle 2.1.svg") no-repeat center;
+      background: #FFFFFF url("/assets/img/Rectangle 2.1.svg") no-repeat 90% 50%;
       border: 1px solid #BC9CFF;
     }
   }
@@ -24,13 +20,14 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    user-select: none;
+    user-select: none; 
+    margin-bottom: @rem*10;
   }
   &__custom {
     height: @rem*18;
-    width: @rem*18;
+    width: @rem*38;
     border-radius: @rem*10;
-    background: #FFFFFF;
+    background: url("/assets/img/Rectangle 2.1-grey.svg") no-repeat 10% 50%;
     border: 1px solid rgba(31, 32, 65, 0.25);
     position: relative;
     flex-shrink: 0;
@@ -39,8 +36,8 @@
       display: block;
       width: 0;
       height: 0;
-      left: -@rem*0.75;
-      top: -@rem*0.7;
+      left: -@rem*1;
+      top: -@rem*0.9;
       position: absolute;
     }
   }

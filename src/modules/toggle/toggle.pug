@@ -1,0 +1,17 @@
+// mixin toggle
+// +toggle-block({legend: ""}, [{label: "", type: "", name-modifier(specify modifier name): "true"}, {label: "", type: "", name-modifier(specify modifier name): "true"}])
+
+mixin toggle-block(legend, options)
+  -var toggleBlockClassName = "toggle-block"
+  -var legendClassName = "toggle-block__legend"
+  -var labelClassName = "toggle-block__label"
+  -var InputClassName = "toggle-block__input"
+  -var customClassName = "toggle-block__custom"
+  -var contentClassName = "toggle-block__content"
+  legend(class=legendClassName)=legend.legend
+    div(class=toggleBlockClassName)
+      each item in options
+        label(class=labelClassName)
+          input(class=InputClassName)(type=item.type)
+          div(class=customClassName)
+          div(class=contentClassName)= item.label

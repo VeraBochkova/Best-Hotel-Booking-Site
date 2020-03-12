@@ -1,0 +1,20 @@
+// mixin like-button
+// +like-button-block-form({legend: ""}, [{type: "", name: "", name-modifier(specify modifier name): "true"}, {type: "", name-modifier(specify modifier name): "true"}];
+
+mixin like-button-block-form(legend, options)
+  -var containerClassName = "like-button-block-form__container"
+  -var legendClassName = "like-button-block-form__legend"
+  -var labelClassName = "like-button-block-form__label"
+  -var InputClassName = "like-button-block-form__input"
+  -var customClassName = "like-button-block-form__custom"
+  -var iconClassName = "like-button-block-form__icon"
+  -var counterClassName = "like-button-block-form__counter"
+  form.like-button-block-form
+    legend(class=legendClassName)=legend.legend
+      div(class=containerClassName)
+        each item in options
+          label(class=labelClassName)
+            input(class=InputClassName)(type=item.type)
+            div(class=customClassName) 
+              div(class=iconClassName)=item.name
+              div(class=counterClassName) 2
