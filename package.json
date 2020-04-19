@@ -58,6 +58,7 @@
     }
   },
   "dependencies": {
+    "acorn": "^7.1.1",
     "jquery": "^3.4.1"
   }
 }
