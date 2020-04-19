@@ -1,0 +1,13 @@
+// mixin rate-button
+// +rate-button-block-form({id: "", name-modifier(specify modifier name): "true"})
+
+mixin rate-button-block-form(options)
+  -var containerClassName = "rate-button-block-form__container"
+  -var labelClassName = "rate-button-block-form__label"
+  -var InputClassName = "rate-button-block-form__input"
+  //-labelClassName = options.rate2 ? "rate-button-block-form__label_rate2" : "rate-button-block-form__label"
+  form.rate-button-block-form
+    div(class=containerClassName id=options.id)
+      each val in [1, 2, 3, 4, 5]
+        label(class=labelClassName) star_border
+          input(class=InputClassName)(type='radio')

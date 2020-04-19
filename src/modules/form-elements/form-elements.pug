@@ -4,6 +4,7 @@ include ../checkbox/checkbox
 include ../radio-button/radio-button
 include ../toggle/toggle
 include ../like-button/like-button
+include ../rate-button/rate-button
 
 form.wrapper-input-block
   +input-block({label: "Text field", inputDescription: "default", name: "email", type: "email", placeholder: "Email", id: "email"})
@@ -19,4 +20,8 @@ div.wrapper-button-block
   +radio-button-block({legend: "Radio Buttons"}, [{label: "Мужчина", type: "radio", name: "male"}, {label: "Женщина", type: "radio", name: "male"}])
   +toggle-block({legend: "Toggle"}, [{label: "Получать спецпредложения", type: "checkbox"}, {label: "Получать спецпредложения", type: "checkbox"}])
   +like-button-block-form({legend: "like button"}, [{type: "checkbox", name: "favorite_border"}, {type: "checkbox", name: "favorite_border"}])
-  
+  div.spacer
+  div.legend-rate-button-block rate button
+  div.container-block
+    +rate-button-block-form({id: "r1"})
+    +rate-button-block-form({id: "r2"})

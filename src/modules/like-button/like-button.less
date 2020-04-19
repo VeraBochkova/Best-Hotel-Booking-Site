@@ -12,14 +12,6 @@
   }
   &__input {
     display: none;
-    &:checked + .like-button-block-form__custom::after {
-      height: @rem*19.5;
-      width: @rem*39.5;
-      background: url("/assets/img/Rectangle 2.svg") no-repeat center;
-      background-size: contain;
-      .font-properties(@rem*10; @rem*9; #BC9CFF; @MaterialIcons-Regular);
-      text-transform: none;
-    }
   }
   &__label {
     cursor: pointer;
@@ -34,25 +26,18 @@
     height: @rem*18;
     width: @rem*38;
     border-radius: @rem*10;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    position: relative;
+    border: @rem*1 solid rgba(31, 32, 65, 0.25);
     flex-shrink: 0;
-    &::after {
-      content: "favorite";
-      display: block;
-      width: 0;
-      height: 0;
-      left: -@rem*0.5;
-      top: -@rem*0.7;
-      position: absolute;
-      overflow: hidden;
+    &_click {
+      background: url("/assets/img/Rectangle 2.svg") no-repeat center;
+      background-size: @rem*40 @rem*20;
     }
   }
   &__icon {
     .font-properties(@rem*10; @rem*9; rgba(31, 32, 65, 0.25); @MaterialIcons-Regular);
     text-transform: none;
     width: 20%;
-    &:checked {
+    &_click {
       .font-properties(@rem*10; @rem*9; #BC9CFF; @MaterialIcons-Regular);
     }
   }
@@ -60,5 +45,9 @@
     .font-properties(@rem*10; @rem*17; rgba(31, 32, 65, 0.25); @montserrat-regular);
     width: 35%;
     align-self: flex-start;
+    &_click {
+      color: #BC9CFF;
+      width: 37%;
+    }
   }
 }

@@ -121,6 +121,7 @@ module.exports = {
       {from: `${PATHS.src}/modules/radio-button/Rectangle 2.1`, to: `${PATHS.assets}img`},
       {from: `${PATHS.src}/modules/toggle/Rectangle 2.1-grey`, to: `${PATHS.assets}img`},
       {from: `${PATHS.src}/modules/like-button/Rectangle 2`, to: `${PATHS.assets}img`},
+      /*{from: `${PATHS.src}/modules/rate-button/star`, to: `${PATHS.assets}img`},*/
       {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
       {from: `${PATHS.src}/${PATHS.assets}static`, to: `${PATHS.assets}static`}
     ]),
